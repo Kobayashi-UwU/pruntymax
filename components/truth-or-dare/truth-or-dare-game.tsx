@@ -100,19 +100,19 @@ export function TruthOrDareGame() {
         return;
       }
 
-      setQuestion((current) => {
+    setQuestion((current) => {
         const next = getRandomQuestion(candidateList, options?.force ? undefined : current) || current;
         derivedSource = sourceLabel;
         shouldAnimate = true;
-        return next;
-      });
+      return next;
+    });
 
       if (derivedSource) {
         setQuestionSource(derivedSource);
       }
 
       if (shouldAnimate) {
-        setAnimationKey((prev) => prev + 1);
+    setAnimationKey((prev) => prev + 1);
       }
     },
     [customTruths, customDares, level, removedBasePrompts],
@@ -259,9 +259,9 @@ export function TruthOrDareGame() {
 
       <GameCard animateKey={animationKey} className="space-y-4 text-left">
         <div className="flex items-start justify-between gap-4">
-          <p className="text-sm font-medium uppercase tracking-[0.3em] text-white/50">
+        <p className="text-sm font-medium uppercase tracking-[0.3em] text-white/50">
             {mode === "truth" ? "Truth" : "Dare"} · {levelInfo.label} {levelInfo.emoji} · {sourceLabel}
-          </p>
+        </p>
           <button
             type="button"
             onClick={handleDeleteCurrent}
