@@ -47,7 +47,7 @@ export function BottleSpinGame() {
     bottom: defaultPlayers[1] ?? defaultPlayers[0],
   }));
   const [challenge, setChallenge] = useState<string>(() =>
-    formatChallenge(bottleChallengeTemplates[0], {
+    formatChallenge(bottleChallengeTemplates.basic[0], {
       top: defaultPlayers[0],
       bottom: defaultPlayers[1] ?? defaultPlayers[0],
     }),
