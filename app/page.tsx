@@ -10,7 +10,7 @@ type GameLink = {
 const games: GameLink[] = [
   { label: "Truth or Dare", href: "/truth-or-dare", status: "available" },
   { label: "Bottle Spin", href: "/bottle-spin", status: "available" },
-  { label: "Drinking Roulette", status: "coming soon" },
+  { label: "Drinking Roulette", href: "/drinking-roulette", status: "available" },
 ];
 
 export default function HomePage() {
